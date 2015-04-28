@@ -1,5 +1,17 @@
 from bs4 import BeautifulSoup
 from urllib2 import urlopen
+import sendgrid
+
+def send_email(msg):
+	sg = sendgrid.SendGridClient(user, password)
+	message = sendgrid.Mail()
+
+	message.add_to("vic317_yeh@hotmail.com")
+	message.set_from("classscanner@localhost.com")
+	message.set_subject("Class Scanner")
+	message.set_html(msg)
+
+	sg.send(message)
 
 def check_enrollment(url):
 	html = urlopen(url).read()
@@ -19,6 +31,8 @@ def check_enrollment(url):
 	else:
 		result = "Gotta wait bro!"
 	print result
+
+	send_email(result)
 
 
 
