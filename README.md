@@ -8,6 +8,6 @@ An introductory talk on using Python's Beautiful Soup library to build a fully f
 Facebook: https://www.facebook.com/events/682072885232451/
 
 #Contact Me
-Twitter: @vicohyeh
+Twitter: @vicohyeh 
 
 Email: vic.yeh@ucla.edu
